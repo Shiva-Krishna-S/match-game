@@ -1,0 +1,16 @@
+.image-item {
+  list-style-type: none;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  width: 19%;
+}
+
+.image-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.each-image {
+  width: 100%;
+}
