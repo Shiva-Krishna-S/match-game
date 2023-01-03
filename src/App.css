@@ -42,7 +42,7 @@ body {
   .navbar-container {
     width: 85%;
     margin: auto;
-    padding-top: 20px;
+    padding-top: 0px;
     padding-bottom: 20px;
   }
 }
@@ -62,12 +62,14 @@ body {
 .score-timer-container {
   display: flex;
   align-items: center;
+  padding-left: 0px;
 }
 
 .score-text {
   font-family: 'Roboto';
   color: #ffffff;
   font-size: 16px;
+  list-style-type: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -92,6 +94,7 @@ body {
   display: flex;
   align-items: center;
   margin-left: 20px;
+  list-style-type: none;
 }
 
 .timer-image {

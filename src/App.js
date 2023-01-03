@@ -342,19 +342,21 @@ class App extends Component {
               alt="website logo"
               className="logo-image"
             />
-            <div className="score-timer-container">
-              <p className="score-text">
-                Score: <span className="score-count">{score}</span>
-              </p>
-              <div className="timer-container">
+            <ul className="score-timer-container">
+              <li className="score-text">
+                <p>
+                  Score: <span className="score-count">{score}</span>
+                </p>
+              </li>
+              <li className="timer-container">
                 <img
                   src="https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png"
                   alt="timer"
                   className="timer-image"
                 />
                 <p className="score-count">{secondsElapsed} Sec</p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </nav>
         {!isGameOver && (
