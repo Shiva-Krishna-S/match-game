@@ -269,6 +269,10 @@ class App extends Component {
     clearInterval(this.timerId)
   }
 
+  restartGame = () => {
+    this.timerId = setInterval(this.tick, 1000)
+  }
+
   tick = () => {
     const {secondsElapsed} = this.state
     if (secondsElapsed === 1) {
@@ -296,13 +300,16 @@ class App extends Component {
   }
 
   playAgain = () => {
-    this.setState({
-      activeTabId: tabsList[0].tabId,
-      toMatchImgUrlId: imagesList[0].id,
-      score: 0,
-      isGameOver: false,
-      secondsElapsed: 60,
-    })
+    this.setState(
+      {
+        activeTabId: tabsList[0].tabId,
+        toMatchImgUrlId: imagesList[0].id,
+        score: 0,
+        isGameOver: false,
+        secondsElapsed: 60,
+      },
+      this.restartGame,
+    )
   }
 
   setActiveTabId = tabId => {
